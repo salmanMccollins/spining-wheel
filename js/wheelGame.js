@@ -97,7 +97,7 @@ class CommonWheel extends Phaser.Scene {
     this.spinbutton.setInteractive();
     // adding the text field for button
     this.prizeText = this.add
-      .bitmapText(this.centerX, this.centerY + 545, "sectorFont", "Play", 54, 1)
+      .bitmapText(this.centerX, this.centerY + 545, "sectorFont", "Play", 75, 1)
       .setOrigin(0.5);
     this.prizeText.tint = wheelConfig.prizeTextTint;
 
@@ -121,7 +121,7 @@ class CommonWheel extends Phaser.Scene {
     this.pointer = this.addSprite("pointer");
 
     // Define button dimensions and position
-    const buttonWidth = 300;
+    const buttonWidth = 500;
     const buttonHeight = 80;
     const buttonX = this.centerX - buttonWidth / 2;
     const buttonY = this.centerY + 670; // Position it below the spin button
@@ -144,7 +144,7 @@ class CommonWheel extends Phaser.Scene {
         this.centerX, // Center the text horizontally
         buttonY + buttonHeight / 2, // Center the text vertically within the background
         "sectorFont",
-        "Go to Page",
+        "Go to Product Page",
         40 // Font size for the redirect button
       )
       .setOrigin(0.5)
@@ -340,7 +340,7 @@ class CommonWheel extends Phaser.Scene {
               console.log("spin complete");
               this.canSpin = true; // player can spin again
               this.animLightSector(); // this.wheel_spin_clip.stop();
-              this.win_clip.play();
+              // this.win_clip.play();
 
               dynamicUrl = wheelConfig.sectors[rand_sector].url;
 
